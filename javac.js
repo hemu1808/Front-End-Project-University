@@ -2,7 +2,7 @@ document.addEventListener('DOMContentLoaded', () => {
     let numQuestions, operations, correctResponses = 0, incorrectResponses = 0, currentQuestion = 0, timer;
     let startTime = new Date();
 
-    // Game Settings
+    
     document.getElementById('start-game').addEventListener('click', () => {
         numQuestions = parseInt(document.getElementById('num-questions').value);
         operations = [];
@@ -22,7 +22,7 @@ document.addEventListener('DOMContentLoaded', () => {
         startTimer();
     });
 
-    // Generate a new problem
+    
     function generateProblem() {
         const num1 = Math.floor(Math.random() * 10) + 1;
         const num2 = Math.floor(Math.random() * 10) + 1;
@@ -33,7 +33,7 @@ document.addEventListener('DOMContentLoaded', () => {
         document.getElementById('checkAnswer').disabled = false;
     }
 
-    // Check the answer
+    
     document.getElementById('checkAnswer').addEventListener('click', () => {
         const num1 = parseInt(document.getElementById('question').textContent.split(' ')[0]);
         const num2 = parseInt(document.getElementById('question').textContent.split(' ')[2]);
@@ -60,7 +60,7 @@ document.addEventListener('DOMContentLoaded', () => {
         document.getElementById('nextProblem').style.display = 'inline-block';
     });
 
-    // Move to the next question
+    
     document.getElementById('nextProblem').addEventListener('click', () => {
         currentQuestion++;
         if (currentQuestion < numQuestions) {
@@ -71,7 +71,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
-    // Start the timer
+    
     function startTimer() {
         let timeLeft = 60;  // 1 minute timer
         const timerElement = document.getElementById('timer');
@@ -87,7 +87,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }, 1000);
     }
 
-    // End the game
+    
     function endGame() {
         clearInterval(timer);
         document.getElementById('game').style.display = 'none';
