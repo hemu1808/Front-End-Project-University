@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arithmetic Game</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Arithmetic Calculation Game</h1>
+    <h2>Front End Development Project</h2>
+    <div id="timer">Time: 00:00</div>
+
+    <div id="settings">
+        <h2>Game Settings</h2>
+        <label>Number of Questions: <input type="number" id="num-questions" min="1" value="5"></label><br><br>
+        <label>Operations: 
+            <input type="checkbox" id="add"> Addition 
+            <input type="checkbox" id="sub"> Subtraction 
+            <input type="checkbox" id="mul"> Multiplication 
+            <input type="checkbox" id="div"> Division
+        </label><br><br>
+        <button id="start-game">Start Game</button>
+    </div>
+
+    <div id="game" style="display:none;">
+        <div id="question"></div>
+        <input type="number" id="userAnswer" placeholder="Your answer">
+        <div id="result"></div>
+        <div id="controls">
+            <button id="checkAnswer">Check Answer</button>
+            <button id="nextProblem" style="display:none;">Next Question</button>
+        </div>
+    </div>
+
+    <!-- Results Section -->
+    <div id="results" style="display:none;">
+        <h2>Game Results</h2>
+        <p>Correct Responses: <span id="correctResponses">0</span></p>
+        <p>Incorrect Responses: <span id="incorrectResponses">0</span></p>
+        <p>Time Taken: <span id="timeTaken">00:00</span></p>
+    </div>
+
+    <script src="javac.js"></script>
+</body>
+</html>
